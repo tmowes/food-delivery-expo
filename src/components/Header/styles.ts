@@ -63,6 +63,7 @@ export const RightIcon = styled.Image.attrs({
   width: 30px;
   height: 30px;
 `
+
 export const CenterView = styled.View`
   ${({ theme: { colors } }) => css`
     width: 60%;

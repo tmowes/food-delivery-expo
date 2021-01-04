@@ -7,7 +7,7 @@ import * as themes from './styles/themes'
 const AppWrapper = styled.View`
   ${({ theme: { colors } }) => css`
     flex: 1;
-    background: ${colors.foodPrimary};
+    background: ${colors.backgroundColor};
   `}
 `
 

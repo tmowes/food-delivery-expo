@@ -5,3 +5,10 @@ export type RestaurantParams = {
   restaurant: RestaurantProps
   currentLocation: LocationProps
 }
+
+export type OrderProps = {
+  menuId: number
+  quantity: number
+  price: number
+  total: number
+}

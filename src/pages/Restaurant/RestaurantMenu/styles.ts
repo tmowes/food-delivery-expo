@@ -5,12 +5,12 @@ import { sHeight, sWidth } from '../../../constants/dimensions'
 
 export const Container = styled.View`
   ${({ theme: { colors } }) => css`
-    background: ${colors.backgroundColor};
+    background: ${colors.foodWhiteLighter};
     width: ${sWidth}px;
     align-items: center;
-    border-radius: 24px;
+    border-radius: 32px;
     overflow: hidden;
-    margin-top: 16px;
+    margin: 4px 0 16px;
   `}
 `
 
@@ -28,7 +28,7 @@ export const FoodImage = styled.Image.attrs({
 
 export const QuantityContainer = styled.View`
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   width: ${sWidth}px;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@ export const MinusButton = styled(RectButton)`
 
 export const MinusIcon = styled(Feather).attrs({
   name: 'minus',
-  size: 28,
+  size: 24,
 })`
   color: whitesmoke;
 `
@@ -85,7 +85,7 @@ export const PlusButton = styled(RectButton)`
 
 export const PlusIcon = styled(Feather).attrs({
   name: 'plus',
-  size: 28,
+  size: 24,
 })`
   color: whitesmoke;
 `
@@ -102,25 +102,26 @@ export const QuantityView = styled.View`
 
 export const Quantity = styled.Text`
   color: whitesmoke;
-  font-size: 16px;
+  font-size: 18px;
 `
 
 export const Details = styled.View`
-  width: ${sWidth}px;
-  align-items: center;
-  padding: 0 32px;
+  ${({ theme: { colors } }) => css`
+    background: ${colors.foodWhiteLighter};
+    width: ${sWidth}px;
+    align-items: center;
+    padding: 0 32px;
+  `}
 `
 
 export const FoodName = styled.Text`
   margin: 8px 0;
-  color: whitesmoke;
   font-size: 22px;
   line-height: 30px;
   font-weight: bold;
   text-align: center;
 `
 export const Description = styled.Text`
-  color: whitesmoke;
   font-size: 16px;
   line-height: 22px;
 `
