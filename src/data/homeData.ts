@@ -3,8 +3,8 @@ import { icons, images } from '../constants'
 const initialCurrentLocation = {
   streetName: 'Timbó, SC',
   gps: {
-    latitude: -26.8411135,
-    longitude: -49.2537338,
+    latitude: -26.821969057031374,
+    longitude: -49.26164430491478,
   },
 }
 
@@ -76,8 +76,8 @@ const restaurantData = [
     photo: images.burger_restaurant_1,
     duration: '30 - 45 min',
     location: {
-      latitude: 1.5347282806345879,
-      longitude: 110.35632207358996,
+      latitude: -26.821499321276715,
+      longitude: -49.2768361392796,
     },
     courier: {
       avatar: images.avatar_1,
@@ -139,7 +139,8 @@ const restaurantData = [
         menuId: 5,
         name: 'Tomato & Basil Pizza',
         photo: images.pizza,
-        description: 'Fresh tomatoes, aromatic basil pesto and melted bocconcini',
+        description:
+          'Fresh tomatoes, aromatic basil pesto and melted bocconcini',
         calories: 250,
         price: 20,
       },
@@ -311,4 +312,11 @@ const restaurantData = [
   },
 ]
 
-export default { initialCurrentLocation, categoryData, affordable, fairPrice, expensive, restaurantData }
+export default {
+  initialCurrentLocation,
+  categoryData,
+  affordable,
+  fairPrice,
+  expensive,
+  restaurantData,
+}

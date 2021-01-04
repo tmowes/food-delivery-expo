@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 
 import * as S from './styles'
@@ -47,11 +47,9 @@ const Restaurant: React.FC = () => {
   const editOrder = (action: string, menuId: number, price: number) => {
     let orderList = orderItems.slice()
     let item = orderList.filter(a => a.menuId === menuId)
-    console.log({ item })
 
     if (action === '+') {
       if (item.length > 0) {
-        console.log('+++++++++++++++++++++')
         let newQty = item[0].quantity + 1
         item[0].quantity = newQty
         item[0].total = item[0].quantity * price
@@ -68,7 +66,6 @@ const Restaurant: React.FC = () => {
       setOrderItems(orderList)
     } else {
       if (item.length > 0) {
-        console.log('-------------------')
         if (item[0]?.quantity > 0) {
           let newQty = item[0].quantity - 1
           item[0].quantity = newQty
@@ -78,6 +75,7 @@ const Restaurant: React.FC = () => {
       setOrderItems(orderList)
     }
   }
+
   return (
     <S.Container>
       <C.Header
